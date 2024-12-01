@@ -1,0 +1,50 @@
+<div
+  style="
+    width: 100vw;
+    padding: 20px 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  ">
+  <div>
+    <form method="post" >
+      <!-- Cập nhật enctype -->
+      <p class="h1 text-primary">Thông tin sản phẩm</p>
+      <div class="mb-3">
+        <label for="productname" class="form-label">Tên sản phẩm</label>
+        <input
+          name="productname"
+          type="text"
+          class="form-control"
+          id="productname"
+          required />
+        <!-- Thêm required -->
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Giá sản phẩm</label>
+        <input
+          type="number"
+          name="price"
+          class="form-control"
+          id="price"
+          required />
+        <!-- Thêm required -->
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Mô tả</label>
+        <textarea
+          name="description"
+          class="form-control"
+          id="description"
+          rows="3"
+          required></textarea>
+        <!-- Thay đổi thành textarea và thêm required -->
+      </div>
+
+      <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+    </form>
+  </div>
+</div>

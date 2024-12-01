@@ -1,0 +1,69 @@
+<div
+  style="
+    width: 100vw;
+    padding: 20px 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  ">
+  <img
+    style="width: 400px"
+    src="https://product.hstatic.net/200000588671/product/ao-so-mi-nam-bycotton-trang-art-nhan_8ec622a241ea4deb93a02bdbdcb87954.jpg"
+    alt="" />
+  <div>
+    <form method="post" enctype="multipart/form-data">
+      <p class="h1 text-primary">Chi tiết sản phẩm</p>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Tên sản phẩm</label>
+        <input
+          value="<%= data.dataProduct.productname %>"
+          name="productname"
+          type="text"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Giá sản phẩm</label
+        >
+        <input
+          value="<%= data.dataProduct.price %>"
+          type="text"
+          name="price"
+          class="form-control"
+          id="exampleInputPassword1" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Mô tả</label>
+        <input
+          type="text"
+          value="<%= data.dataProduct.description %>"
+          name="description"
+          class="form-control"
+          id="exampleInputPassword1" />
+      </div>
+      <div class="mb-3">
+        <label for="imageUpload" class="form-label">Hình ảnh mới</label>
+        <input
+          type="file"
+          name="imgpath"
+          class="form-control"
+          id="imageUpload" />
+      </div>
+      <input
+        type="hidden"
+        name="imgpathOld"
+        value="<%= data.dataProduct.imgpath %>" />
+      <button type="submit" class="btn btn-primary">Cập nhật</button>
+    </form>
+    <form action="/delete/<%=data.dataProduct.id%>" method="post">
+      <button type="submit" class="btn btn-danger" style="margin-top: 10px">
+        Xóa
+      </button>
+    </form>
+  </div>
+</div>
